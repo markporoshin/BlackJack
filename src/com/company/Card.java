@@ -29,7 +29,6 @@ public class Card {
         Card card = (Card) o;
 
         return value == card.value;
-
     }
 
     @Override
