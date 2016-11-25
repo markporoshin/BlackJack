@@ -11,6 +11,10 @@ public class Human extends Player {
     @Override
     public void setBet() {
         bet = new HumanBetter();
+        if(!bet.setBet(this.money)){
+            System.out.println("кончились деньги");
+            System.exit(1);
+        }
         super.setBet();
     }
 }

@@ -12,12 +12,14 @@ public class HumanIntellect extends Intellect{
     @Override
     public Command decide(int score) {
         do{
-            System.out.println("Hit/Stand/Exit: ");
+            System.out.println("Hit/Stand/Exit/Double: ");
             String s = in.nextLine();
             if("hit".startsWith(s.toLowerCase())){
                 return Command.HIT;
             }else if("stand".startsWith(s.toLowerCase())) {
                 return Command.STAND;
+            }else if("double".startsWith(s.toLowerCase())) {
+                return Command.DOUBLE;
             }else if("exit".startsWith(s.toLowerCase())){
                 return  Command.EXTT;
             }else{

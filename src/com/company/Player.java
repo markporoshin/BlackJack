@@ -1,12 +1,15 @@
 package com.company;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import static com.company.PlayerState.WIN;
 
 /**
  * Created by Mark on 09.11.2016.
  */
 public abstract class Player {
-    Hand hand = new Hand();
+    Hand hand = new Hand(this);
     PlayerState state;
     String name;
     Better bet;

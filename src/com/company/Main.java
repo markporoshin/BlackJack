@@ -9,14 +9,18 @@ public class Main {
         Table table = new Table();
         table.initTable();
         String nr;
-        do{
-            table.startRound();
-            table.playRound();
-            table.decideWinner();
-            table.endRound();
-            table.decideBet();
-            System.out.println("начать новый раунд?");
-            nr = HumanIntellect.in.nextLine();
-        }while ("yes".startsWith(nr.toLowerCase()) && table.exit);
+        System.out.println("начать первый раунд?");
+        nr = HumanIntellect.in.nextLine();
+        while ("yes".startsWith(nr.toLowerCase())){
+
+                table.startRound();
+                table.playRound();
+                table.decideWinner();
+                table.endRound();
+                table.decideBet();
+                System.out.println("начать новый раунд?");
+                nr = HumanIntellect.in.nextLine();
+
+        }
     }
 }

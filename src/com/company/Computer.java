@@ -11,6 +11,9 @@ public class Computer extends Player {
     @Override
     public void setBet() {
         bet = new HalfBetter();
+        if(!bet.setBet(this.money)){
+            System.out.println("кончились деньги");
+        }
         super.setBet();
     }
 
